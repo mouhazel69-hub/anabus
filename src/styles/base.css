@@ -1,0 +1,44 @@
+/* Styles de base communs à toute l'application.
+   Seules les variables de tokens.css donnent couleurs, espaces et polices. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+html[data-theme="sombre"] { color-scheme: dark; }
+
+body {
+  margin: 0;
+  min-width: 360px;
+  font-family: var(--font-texte);
+  font-size: 16px;
+  line-height: 24px;
+  background: var(--fond);
+  color: var(--encre);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p { margin: 0; }
+img, svg { display: block; }
+button, input, select, textarea { font: inherit; color: inherit; }
+a { color: var(--lien); }
+
+/* Focus clavier visible partout, avec l'anneau de la charte. */
+:focus-visible { outline: none; box-shadow: var(--anneau-focus); }
+
+/* Texte réservé aux lecteurs d'écran. */
+.vh {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* Chiffres de même largeur : les minutes ne « sautent » pas quand elles changent. */
+.chiffres { font-variant-numeric: tabular-nums; }
+
+/* Le logo existe en deux versions : on montre celle qui va avec le thème. */
+.logo-sombre { display: none; }
+[data-theme="sombre"] .logo-clair { display: none; }
+[data-theme="sombre"] .logo-sombre { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
