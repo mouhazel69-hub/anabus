@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Ana Bus montre où est votre bus à Dakar et dans combien de minutes il arrive." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Ana Bus</title>
+    <script>
+      // Thème clair ou sombre selon le réglage du téléphone, posé avant l'affichage
+      // pour éviter un éclair blanc. Les variables de tokens.css lisent data-theme.
+      (function () {
+        var m = window.matchMedia('(prefers-color-scheme: dark)');
+        function appliquer() {
+          if (document.documentElement.dataset.themeForce) return;
+          document.documentElement.dataset.theme = m.matches ? 'sombre' : 'clair';
+        }
+        appliquer();
+        m.addEventListener('change', appliquer);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="racine"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
