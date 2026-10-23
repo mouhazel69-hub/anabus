@@ -1,0 +1,22 @@
+.barre {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+  background: var(--fond-eleve); border-top: 1px solid var(--trait);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.barre ul { display: flex; max-width: 560px; margin: 0 auto; padding: 0; list-style: none; }
+.barre li { flex: 1; }
+.barre-onglet {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  min-height: 64px; color: var(--encre-douce); text-decoration: none;
+  font-size: 13px; line-height: 18px; font-weight: 700;
+}
+.barre-onglet svg { width: 24px; height: 24px; }
+.barre-onglet[aria-current="page"] { color: var(--encre); }
+/* L'onglet ouvert : un trait bleu en haut, pour ne pas dépendre de la seule couleur du texte. */
+.barre-onglet { position: relative; }
+.barre-onglet[aria-current="page"]::before {
+  content: ""; position: absolute; top: 0; left: 50%; width: 32px; height: 3px; margin-left: -16px;
+  border-radius: 0 0 3px 3px; background: var(--bleu);
+}
+.barre-onglet:focus-visible { border-radius: var(--rayon-md); }
+.barre-onglet:hover { color: var(--encre); }

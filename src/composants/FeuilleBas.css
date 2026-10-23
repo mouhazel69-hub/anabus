@@ -1,0 +1,23 @@
+.feuille {
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 12px 20px var(--espace-6);
+  background: var(--fond-eleve); color: var(--encre);
+  border-radius: var(--rayon-lg) var(--rayon-lg) 0 0; box-shadow: var(--ombre-feuille);
+}
+.feuille-poignee { width: 40px; height: 4px; flex: none; align-self: center; border-radius: var(--rayon-plein); background: var(--trait); }
+.feuille-tete { display: flex; flex-direction: column; gap: 6px; }
+.feuille-texte { font-size: 16px; line-height: 24px; color: var(--encre-douce); }
+
+/* Feuille modale : l'écran derrière est assombri par la nuit à 50 %. */
+.feuille-voile {
+  position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+  background: color-mix(in srgb, var(--nuit) 50%, transparent);
+  animation: feuille-voile .2s ease-out;
+}
+.feuille-modale {
+  width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto;
+  gap: var(--espace-4); padding-bottom: calc(var(--espace-8) + env(safe-area-inset-bottom));
+  box-shadow: none; animation: feuille-monte .25s ease-out;
+}
+@keyframes feuille-voile { from { opacity: 0; } }
+@keyframes feuille-monte { from { transform: translateY(40px); opacity: 0; } }

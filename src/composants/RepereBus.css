@@ -1,0 +1,19 @@
+.repere { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; }
+.repere-disque {
+  position: relative; z-index: 1; display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: var(--rayon-plein); background: var(--jaune); color: var(--sur-jaune);
+  box-shadow: 0 0 0 2.5px var(--sur-jaune), var(--ombre-feuille);
+}
+.repere-disque svg { width: 20px; height: 24px; }
+.repere-onde {
+  position: absolute; inset: 0; border: 3px solid var(--jaune); border-radius: var(--rayon-plein);
+  animation: repere-onde 2s ease-out infinite;
+}
+.repere-etiquette {
+  position: absolute; z-index: 2; left: 32px; top: -8px; padding: 1px var(--espace-2);
+  border-radius: var(--rayon-plein); background: var(--nuit); color: var(--sur-nuit); box-shadow: 0 0 0 2px var(--fond);
+  font-size: 13px; line-height: 18px; font-weight: 800; white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+@keyframes repere-onde { from { transform: scale(.95); opacity: .9; } to { transform: scale(1.9); opacity: 0; } }
+/* « Réduire les animations » : l'onde disparaît. */
+@media (prefers-reduced-motion: reduce) { .repere-onde { display: none; } }

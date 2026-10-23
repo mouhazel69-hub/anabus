@@ -1,0 +1,13 @@
+.rond {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 44px; height: 44px; padding: 0; border: 0; border-radius: var(--rayon-plein);
+  background: transparent; color: var(--encre); cursor: pointer;
+}
+/* La zone tactile dépasse de 2 px tout autour : 48 px, comme le demande la charte. */
+.rond::before { content: ""; position: absolute; inset: -2px; border-radius: inherit; }
+.rond svg { width: 24px; height: 24px; }
+.rond-flottant { background: var(--fond-eleve); box-shadow: var(--ombre-feuille); }
+.rond-doux { background: var(--fond-carte); }
+.rond:hover { background: var(--fond-carte); }
+.rond-doux:hover { background: var(--trait); }
+.rond:focus-visible { box-shadow: var(--anneau-focus); }

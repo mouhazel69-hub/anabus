@@ -1,0 +1,4 @@
+.kaay { display: inline-block; }
+.kaay-sombre { display: none; }
+[data-theme="sombre"] .kaay-clair { display: none; }
+[data-theme="sombre"] .kaay-sombre { display: block; }
