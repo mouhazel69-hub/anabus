@@ -1,0 +1,75 @@
+/* Ana Bus — generated from tokens.json */
+:root, [data-theme="clair"] {
+  --fond: #ffffff;
+  --fond-carte: #f2f4f9;
+  --fond-eleve: #ffffff;
+  --trait: #d9dfeb;
+  --trait-fort: #76829f;
+  --encre: #0b1a3f;
+  --encre-douce: #4a5675;
+  --nuit: #0b1a3f;
+  --sur-nuit: #ffffff;
+  --jaune: #ffc21a;
+  --sur-jaune: #0b1a3f;
+  --jaune-doux: #fff4cf;
+  --bleu: #1d46b8;
+  --vert: #0a7442;
+  --vert-doux: #dcf2e5;
+  --sur-vert: #ffffff;
+  --corail: #b93a0b;
+  --corail-doux: #fce7dd;
+  --lien: var(--bleu);
+  --ombre-feuille: 0 2px 6px #0b1a3f14, 0 12px 32px #0b1a3f1f;
+  --anneau-focus: 0 0 0 2px #ffffff, 0 0 0 4px #1d46b8;
+}
+[data-theme="sombre"] {
+  --fond: #0b1230;
+  --fond-carte: #070c22;
+  --fond-eleve: #161e44;
+  --trait: #2a3460;
+  --trait-fort: #6f7cab;
+  --encre: #f3f5fb;
+  --encre-douce: #a9b3d0;
+  --nuit: #24326b;
+  --sur-nuit: #ffffff;
+  --jaune: #ffc933;
+  --sur-jaune: #0b1a3f;
+  --jaune-doux: #3a2f0c;
+  --bleu: #8eaeff;
+  --vert: #5dd596;
+  --vert-doux: #0f3322;
+  --sur-vert: #04170d;
+  --corail: #ff946a;
+  --corail-doux: #3d190c;
+  --ombre-feuille: 0 12px 32px #000000a6;
+  --anneau-focus: 0 0 0 2px #0b1230, 0 0 0 4px #8eaeff;
+}
+:root {
+  --espace-1: 4px;
+  --espace-2: 8px;
+  --espace-3: 12px;
+  --espace-4: 16px;
+  --espace-6: 24px;
+  --espace-8: 32px;
+  --espace-12: 48px;
+  --rayon-sm: 8px;
+  --rayon-md: 14px;
+  --rayon-lg: 24px;
+  --rayon-plein: 999px;
+  --font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-texte: "Atkinson Hyperlegible Next", "Segoe UI", system-ui, sans-serif;
+}
+.marque { font-family: var(--font-display); font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.02em; }
+.titre-1 { font-family: var(--font-display); font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -0.01em; }
+.titre-2 { font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 600; }
+.minutes { font-family: var(--font-texte); font-size: 56px; line-height: 56px; font-weight: 800; letter-spacing: -0.02em; }
+.ligne { font-family: var(--font-texte); font-size: 18px; line-height: 22px; font-weight: 800; }
+.corps-fort { font-family: var(--font-texte); font-size: 17px; line-height: 24px; font-weight: 700; }
+.corps { font-family: var(--font-texte); font-size: 16px; line-height: 24px; font-weight: 400; }
+.legende { font-family: var(--font-texte); font-size: 13px; line-height: 18px; font-weight: 500; }
+@font-face { font-family: "Unbounded"; src: url("fonts/Unbounded-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Unbounded"; src: url("fonts/Unbounded-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible Next"; src: url("fonts/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible Next"; src: url("fonts/AtkinsonHyperlegibleNext-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible Next"; src: url("fonts/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible Next"; src: url("fonts/AtkinsonHyperlegibleNext-ExtraBold.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr" data-theme="clair">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ana Bus, accueil (maquette)</title>
+<!-- Maquette statique Ana Bus, générée depuis le canevas Design. Les <x-import> sont les composants de design/composants-reference. -->
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../design/composants-reference/bundle.css">
+<script src="../../design/composants-reference/vendor/react.production.min.js"></script>
+<script src="../../design/composants-reference/vendor/react-dom.production.min.js"></script>
+<script src="../../design/composants-reference/bundle.js"></script>
+<style>
+body{margin:0}
+a{color:#1d46b8}a:hover{color:#0b1a3f}
+</style>
+</head>
+<body>
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: var(--fond-carte); color: var(--encre); font-family: var(--font-texte); overflow: hidden;">
+  <header style="background: var(--fond); padding: 20px 16px 24px; display: flex; flex-direction: column; gap: 20px;">
+    <img src="../../design/logos/ana-bus-logo.svg" alt="Ana Bus" style="width: 132px; height: 30px; object-fit: contain; object-position: left center;">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <h1 style="margin: 0; font-family: var(--font-display); font-size: 30px; line-height: 36px; font-weight: 700; letter-spacing: -0.02em;">Ana bus bi ?</h1>
+      <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--encre-douce);">Tapez le numéro de votre bus pour le voir arriver.</p>
+    </div>
+    <x-import component-from-global-scope="AnaBus.RechercheLigne" placeholder="Ex. 23 ou B1"></x-import>
+  </header>
+  <main style="flex-grow: 1; padding: 24px 16px; display: flex; flex-direction: column; gap: 16px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+      <h2 style="margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 600;">Près de vous</h2>
+      <span style="font-size: 13px; line-height: 18px; font-weight: 500; color: var(--encre-douce);">Arrêt Liberté 6, à 120 m</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a href="03-suivi.html" style="display: block; color: inherit; text-decoration: none; border-radius: 14px;">
+        <x-import component-from-global-scope="AnaBus.CarteArrivee" ligne="23" destination="Vers Petersen" arret="Arrêt Liberté 6" minutes="{{m1}}" mise-a-jour="Mis à jour il y a 10 s"></x-import>
+      </a>
+      <x-import component-from-global-scope="AnaBus.CarteArrivee" ligne="B1" destination="Vers Guédiawaye" arret="Station Grand Médine" minutes="{{m4}}" mise-a-jour="Mis à jour il y a 20 s"></x-import>
+      <x-import component-from-global-scope="AnaBus.CarteArrivee" ligne="16A" destination="Vers Keur Massar" arret="Arrêt Liberté 6" minutes="{{m17}}" statut="retard" mot-statut="Retard de 8 min" mise-a-jour="Embouteillage à Colobane"></x-import>
+    </div>
+  </main>
+</div>
+<script>
+class DCLogic { constructor(props) { this.props = props || {}; this.state = {}; } setState(s) { Object.assign(this.state, s); } }
+class Component extends DCLogic {
+  renderVals() {
+    return { m1: 1, m4: 4, m17: 17 };
+  }
+}
+(function () {
+  var vals = {};
+  try { vals = new Component({}).renderVals() || {}; } catch (e) { console.error(e); }
+  var camel = function (s) { return s.replace(/-([a-z])/g, function (_, c) { return c.toUpperCase(); }); };
+  document.querySelectorAll('x-import').forEach(function (el) {
+    var C = window;
+    el.getAttribute('component-from-global-scope').split('.').forEach(function (p) { C = C && C[p]; });
+    if (!C) { console.error('composant introuvable', el.getAttribute('component-from-global-scope')); return; }
+    var props = {};
+    Array.prototype.forEach.call(el.attributes, function (a) {
+      if (a.name === 'component-from-global-scope' || a.name === 'style') return;
+      var m = /^\{\{\s*([\w.]+)\s*\}\}$/.exec(a.value);
+      props[camel(a.name)] = m ? vals[m[1]] : a.value;
+    });
+    var children = el.textContent.trim() || undefined;
+    el.textContent = '';
+    if (el.getAttribute('style')) { if (!el.style.display) el.style.display = 'block'; } else { el.style.display = 'contents'; }
+    ReactDOM.createRoot(el).render(React.createElement(C, props, children));
+  });
+})();
+</script>
+</body>
+</html>

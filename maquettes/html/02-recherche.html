@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr" data-theme="clair">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ana Bus, recherche d'une ligne (maquette)</title>
+<!-- Maquette statique Ana Bus, générée depuis le canevas Design. Les <x-import> sont les composants de design/composants-reference. -->
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../design/composants-reference/bundle.css">
+<script src="../../design/composants-reference/vendor/react.production.min.js"></script>
+<script src="../../design/composants-reference/vendor/react-dom.production.min.js"></script>
+<script src="../../design/composants-reference/bundle.js"></script>
+<style>
+body{margin:0}
+a{color:#1d46b8}a:hover{color:#0b1a3f}
+</style>
+</head>
+<body>
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: var(--fond); color: var(--encre); font-family: var(--font-texte); overflow: hidden;">
+  <header style="display: flex; align-items: center; gap: 8px; padding: 20px 16px 16px 8px;">
+    <a href="01-accueil.html" aria-label="Retour à l'accueil" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: none; border-radius: 999px; color: var(--encre);">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <x-import component-from-global-scope="AnaBus.RechercheLigne" defaut="2" placeholder="Ex. 23 ou B1" style="flex-grow: 1; min-width: 0;"></x-import>
+  </header>
+  <main style="flex-grow: 1; padding: 8px 16px 24px; display: flex; flex-direction: column; gap: 24px;">
+    <section style="display: flex; flex-direction: column; gap: 12px;">
+      <h2 style="margin: 0; font-size: 13px; line-height: 18px; font-weight: 500; color: var(--encre-douce);">Vos lignes récentes</h2>
+      <div style="display: flex; gap: 8px;">
+        <x-import component-from-global-scope="AnaBus.BadgeLigne" ligne="23"></x-import>
+        <x-import component-from-global-scope="AnaBus.BadgeLigne" ligne="B1"></x-import>
+        <x-import component-from-global-scope="AnaBus.BadgeLigne" ligne="16A"></x-import>
+      </div>
+    </section>
+    <section style="display: flex; flex-direction: column;">
+      <h2 style="margin: 0 0 4px; font-size: 13px; line-height: 18px; font-weight: 500; color: var(--encre-douce);">Lignes commençant par 2</h2>
+      <div style="display: flex; align-items: center; gap: 14px; padding: 14px 4px 14px 0; border-bottom: 1px solid var(--trait);">
+        <span style="width: 52px; flex: none; display: flex;"><x-import component-from-global-scope="AnaBus.BadgeLigne" ligne="2"></x-import></span>
+        <span style="flex-grow: 1; display: flex; flex-direction: column;"><span style="font-size: 17px; line-height: 24px; font-weight: 700;">Vers Daroukhane</span><span style="font-size: 13px; line-height: 18px; font-weight: 500; color: var(--encre-douce);">Dem Dikk, 4 bus en circulation</span></span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#4a5675" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px; padding: 14px 4px 14px 0; border-bottom: 1px solid var(--trait);">
+        <span style="width: 52px; flex: none; display: flex;"><x-import component-from-global-scope="AnaBus.BadgeLigne" ligne="20"></x-import></span>
+        <span style="flex-grow: 1; display: flex; flex-direction: column;"><span style="font-size: 17px; line-height: 24px; font-weight: 700;">Vers Place Leclerc</span><span style="font-size: 13px; line-height: 18px; font-weight: 500; color: var(--encre-douce);">Dem Dikk, 2 bus en circulation</span></span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#4a5675" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </div>
+      <a href="03-suivi.html" style="display: flex; align-items: center; gap: 14px; padding: 14px 4px 14px 0; border-bottom: 1px solid var(--trait); color: inherit; text-decoration: none;">
+        <span style="width: 52px; flex: none; display: flex;"><x-import component-from-global-scope="AnaBus.BadgeLigne" ligne="23"></x-import></span>
+        <span style="flex-grow: 1; display: flex; flex-direction: column;"><span style="font-size: 17px; line-height: 24px; font-weight: 700;">Vers Petersen</span><span style="font-size: 13px; line-height: 18px; font-weight: 500; color: var(--encre-douce);">Dem Dikk, 5 bus en circulation</span></span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#4a5675" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </a>
+      <div style="display: flex; align-items: center; gap: 14px; padding: 14px 4px 14px 0; border-bottom: 1px solid var(--trait);">
+        <span style="width: 52px; flex: none; display: flex;"><x-import component-from-global-scope="AnaBus.BadgeLigne" ligne="25"></x-import></span>
+        <span style="flex-grow: 1; display: flex; flex-direction: column;"><span style="font-size: 17px; line-height: 24px; font-weight: 700;">Vers Keur Massar</span><span style="font-size: 13px; line-height: 18px; font-weight: 500; color: var(--encre-douce);">Tata, horaires prévus seulement</span></span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#4a5675" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </div>
+    </section>
+    <section style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: 16px; border-radius: 14px; background: var(--fond-carte);">
+      <span style="font-size: 17px; line-height: 24px; font-weight: 700;">Vous ne connaissez pas le numéro ?</span>
+      <span style="font-size: 16px; line-height: 24px; color: var(--encre-douce);">Voyez les bus qui passent à votre arrêt.</span>
+      <a href="01-accueil.html" class="ab-btn ab-btn-secondaire">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"></path><circle cx="12" cy="10" r="2.25"></circle></svg>
+        Arrêts proches
+      </a>
+    </section>
+  </main>
+</div>
+<script>
+class DCLogic { constructor(props) { this.props = props || {}; this.state = {}; } setState(s) { Object.assign(this.state, s); } }
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+(function () {
+  var vals = {};
+  try { vals = new Component({}).renderVals() || {}; } catch (e) { console.error(e); }
+  var camel = function (s) { return s.replace(/-([a-z])/g, function (_, c) { return c.toUpperCase(); }); };
+  document.querySelectorAll('x-import').forEach(function (el) {
+    var C = window;
+    el.getAttribute('component-from-global-scope').split('.').forEach(function (p) { C = C && C[p]; });
+    if (!C) { console.error('composant introuvable', el.getAttribute('component-from-global-scope')); return; }
+    var props = {};
+    Array.prototype.forEach.call(el.attributes, function (a) {
+      if (a.name === 'component-from-global-scope' || a.name === 'style') return;
+      var m = /^\{\{\s*([\w.]+)\s*\}\}$/.exec(a.value);
+      props[camel(a.name)] = m ? vals[m[1]] : a.value;
+    });
+    var children = el.textContent.trim() || undefined;
+    el.textContent = '';
+    if (el.getAttribute('style')) { if (!el.style.display) el.style.display = 'block'; } else { el.style.display = 'contents'; }
+    ReactDOM.createRoot(el).render(React.createElement(C, props, children));
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr" data-theme="clair">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ana Bus, bienvenue (maquette)</title>
+<!-- Maquette statique Ana Bus, générée depuis le canevas Design. Les <x-import> sont les composants de design/composants-reference. -->
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../design/composants-reference/bundle.css">
+<script src="../../design/composants-reference/vendor/react.production.min.js"></script>
+<script src="../../design/composants-reference/vendor/react-dom.production.min.js"></script>
+<script src="../../design/composants-reference/bundle.js"></script>
+<style>
+body{margin:0}
+a{color:#1d46b8}a:hover{color:#0b1a3f}
+</style>
+</head>
+<body>
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: var(--fond); color: var(--encre); font-family: var(--font-texte); overflow: hidden;">
+  <div style="position: relative; height: 430px; flex: none; background: #ffc21a; border-radius: 0 0 40px 40px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 32px; box-sizing: border-box;">
+    <img src="../../design/logos/ana-bus-logo.svg" alt="Ana Bus" style="position: absolute; left: 24px; top: 28px; width: 132px; height: 30px; object-fit: contain; object-position: left center;">
+    <img src="../../design/mascotte/kaay-salut-contour.svg" alt="Kaay fait coucou" style="width: 290px; height: 290px;">
+  </div>
+  <div style="flex-grow: 1; padding: 32px 24px 32px; display: flex; flex-direction: column; gap: 14px;">
+    <h1 style="margin: 0; font-family: var(--font-display); font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -0.01em;">Salut, moi c'est Kaay.</h1>
+    <p style="margin: 0; font-size: 17px; line-height: 26px; color: var(--encre-douce);">Je vous dis où est votre bus et dans combien de minutes il arrive. Sans inscription.</p>
+    <div role="group" aria-label="Langue de l'appli" style="display: flex; gap: 8px; margin-top: 6px;">
+      <button type="button" aria-pressed="true" style="height: 40px; padding: 0 16px; border: 2px solid #0b1a3f; border-radius: 999px; background: #0b1a3f; color: #ffffff; font-family: var(--font-texte); font-size: 15px; font-weight: 700; cursor: pointer;">Français</button>
+      <button type="button" aria-pressed="false" style="height: 40px; padding: 0 16px; border: 2px solid var(--trait-fort); border-radius: 999px; background: transparent; color: var(--encre); font-family: var(--font-texte); font-size: 15px; font-weight: 700; cursor: pointer;">Wolof</button>
+    </div>
+    <div style="margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: 18px;">
+      <div aria-hidden="true" style="display: flex; gap: 8px;">
+        <span style="width: 24px; height: 8px; border-radius: 999px; background: #0b1a3f;"></span>
+        <span style="width: 8px; height: 8px; border-radius: 999px; background: var(--trait);"></span>
+        <span style="width: 8px; height: 8px; border-radius: 999px; background: var(--trait);"></span>
+      </div>
+      <a href="01-accueil.html" class="ab-btn ab-btn-principal ab-btn-lg" style="width: 100%;">C'est parti</a>
+    </div>
+  </div>
+</div>
+<script>
+class DCLogic { constructor(props) { this.props = props || {}; this.state = {}; } setState(s) { Object.assign(this.state, s); } }
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+(function () {
+  var vals = {};
+  try { vals = new Component({}).renderVals() || {}; } catch (e) { console.error(e); }
+  var camel = function (s) { return s.replace(/-([a-z])/g, function (_, c) { return c.toUpperCase(); }); };
+  document.querySelectorAll('x-import').forEach(function (el) {
+    var C = window;
+    el.getAttribute('component-from-global-scope').split('.').forEach(function (p) { C = C && C[p]; });
+    if (!C) { console.error('composant introuvable', el.getAttribute('component-from-global-scope')); return; }
+    var props = {};
+    Array.prototype.forEach.call(el.attributes, function (a) {
+      if (a.name === 'component-from-global-scope' || a.name === 'style') return;
+      var m = /^\{\{\s*([\w.]+)\s*\}\}$/.exec(a.value);
+      props[camel(a.name)] = m ? vals[m[1]] : a.value;
+    });
+    var children = el.textContent.trim() || undefined;
+    el.textContent = '';
+    if (el.getAttribute('style')) { if (!el.style.display) el.style.display = 'block'; } else { el.style.display = 'contents'; }
+    ReactDOM.createRoot(el).render(React.createElement(C, props, children));
+  });
+})();
+</script>
+</body>
+</html>
