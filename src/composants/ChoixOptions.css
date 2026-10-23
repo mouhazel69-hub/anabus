@@ -1,0 +1,12 @@
+.choix { display: flex; flex-direction: column; gap: var(--espace-2); margin: 0; padding: 0; border: 0; min-width: 0; }
+.choix-option {
+  display: flex; align-items: center; gap: 14px; min-height: 56px; padding: 0 var(--espace-4);
+  border: 1px solid var(--trait); border-radius: var(--rayon-md); cursor: pointer;
+}
+/* Le bouton radio du navigateur, recoloré en bleu. */
+.choix-option input { width: 20px; height: 20px; margin: 0; flex: none; accent-color: var(--bleu); }
+.choix-mot { font-size: 17px; line-height: 24px; font-weight: 500; }
+.choix-option:has(input:checked) { background: var(--jaune-doux); border: 2px solid var(--bleu); padding: 0 15px; }
+.choix-option:has(input:checked) .choix-mot { font-weight: 700; }
+.choix-option:has(input:focus-visible) { box-shadow: var(--anneau-focus); }
+.choix-option input:focus-visible { box-shadow: none; }

@@ -1,0 +1,19 @@
+.bouton {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--espace-2);
+  min-height: 48px; padding: 0 var(--espace-6);
+  border: 2px solid transparent; border-radius: var(--rayon-md);
+  font-family: var(--font-texte); font-size: 16px; line-height: 24px; font-weight: 700;
+  text-decoration: none; cursor: pointer; white-space: nowrap;
+}
+.bouton svg { width: 20px; height: 20px; flex: none; }
+.bouton-principal { background: var(--jaune); color: var(--sur-jaune); }
+/* Au survol, on fonce le jaune avec un voile de la couleur de l'encre sur jaune. */
+.bouton-principal:hover { background: color-mix(in srgb, var(--jaune) 92%, var(--sur-jaune)); }
+.bouton-secondaire { background: transparent; color: var(--encre); border-color: var(--trait-fort); }
+.bouton-secondaire:hover { background: var(--fond-carte); }
+.bouton-discret { background: transparent; color: var(--lien); padding: 0 var(--espace-3); }
+.bouton-discret:hover { text-decoration: underline; text-underline-offset: 3px; }
+.bouton-lg { min-height: 56px; font-size: 17px; }
+.bouton-plein { width: 100%; }
+.bouton:focus-visible { outline: none; box-shadow: var(--anneau-focus); }
+.bouton:disabled { cursor: not-allowed; opacity: .5; }

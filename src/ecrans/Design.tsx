@@ -5,6 +5,7 @@ import { Logo } from '../composants/Logo';
 import symbole from '../assets/logos/ana-bus-symbole.svg';
 import iconeApp from '../assets/logos/ana-bus-icone-app.svg';
 import signature from '../assets/logos/ana-bus-signature.svg';
+import { DemoComposants } from './DemoComposants';
 import './Design.css';
 
 // Les images de Kaay, chargées toutes d'un coup par Vite.
@@ -154,7 +155,7 @@ export default function Design() {
 
       <section className="design-section">
         <h2 className="titre-2">Composants</h2>
-        <p className="corps design-doux">Ils arrivent à l'étape 2.</p>
+        <DemoComposants />
       </section>
     </main>
   );

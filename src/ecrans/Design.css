@@ -41,3 +41,15 @@
 .design-kaay li { min-width: 140px; }
 /* La signature n'existe qu'en version pour fond clair : on la pose sur du blanc dans les deux thèmes. */
 .design-logo-blanc { background: var(--sur-nuit); }
+
+/* Démonstration des composants */
+.demos { display: flex; flex-direction: column; gap: var(--espace-8); }
+.demo { display: flex; flex-direction: column; gap: var(--espace-2); }
+.demo-scene { display: flex; flex-wrap: wrap; align-items: center; gap: var(--espace-3); padding: var(--espace-4); border: 1px solid var(--trait); border-radius: var(--rayon-md); }
+.demo-scene-carte { background: var(--fond-carte); border-color: transparent; }
+.demo-large { width: 100%; max-width: 420px; }
+.demo-ligne { display: flex; align-items: center; gap: var(--espace-3); }
+.demo-repere { padding: var(--espace-4) var(--espace-8) var(--espace-4) var(--espace-4); }
+.demo-nuit { padding: var(--espace-2); background: var(--nuit); border-radius: var(--rayon-md); }
+.demo-barre { position: relative; }
+.demo-barre .barre { position: static; border: 1px solid var(--trait); border-radius: var(--rayon-md); }

@@ -1,0 +1,15 @@
+.badge { display: inline-flex; align-items: center; gap: var(--espace-2); }
+.badge-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 44px; height: 32px; padding: 0 var(--espace-3);
+  border-radius: var(--rayon-plein); background: var(--jaune); color: var(--sur-jaune);
+  /* Le contour garde le badge lisible sur fond blanc (le jaune seul n'y fait que 1,6:1). */
+  box-shadow: inset 0 0 0 1.5px var(--sur-jaune);
+  font-family: var(--font-texte); font-size: 18px; line-height: 22px; font-weight: 800;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.badge-lg .badge-num {
+  min-width: 60px; height: 44px; padding: 0 var(--espace-4);
+  font-size: 24px; line-height: 28px; box-shadow: inset 0 0 0 2px var(--sur-jaune);
+}
+.badge-reseau { font-size: 13px; line-height: 18px; font-weight: 500; color: var(--encre-douce); }

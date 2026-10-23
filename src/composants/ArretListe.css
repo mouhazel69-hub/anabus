@@ -1,0 +1,19 @@
+.arrets { position: relative; }
+.arrets-trait { position: absolute; left: 13px; top: 20px; bottom: 20px; width: 4px; border-radius: 2px; background: var(--bleu); }
+.arrets-liste { position: relative; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; }
+.arret { position: relative; display: flex; align-items: center; gap: 14px; height: 40px; }
+.arret-point {
+  width: 14px; height: 14px; flex: none; margin-left: 8px;
+  border-radius: var(--rayon-plein); background: var(--fond); border: 2.5px solid var(--encre);
+}
+.arret-nom { flex-grow: 1; min-width: 0; font-size: 16px; line-height: 24px; font-weight: 500; }
+.arret-mention { font-size: 13px; font-weight: 500; color: var(--encre-douce); }
+.arret-min { font-size: 16px; line-height: 22px; font-weight: 700; color: var(--encre-douce); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* L'arrêt de l'usager : surligné en jaune doux, point jaune un peu plus grand. */
+.arret-usager { margin: 0 -8px; padding: 0 8px; border-radius: 10px; background: var(--jaune-doux); }
+.arret-usager .arret-point { width: 16px; height: 16px; margin-left: 7px; background: var(--jaune); }
+.arret-usager .arret-nom { font-size: 17px; font-weight: 700; }
+.arret-usager .arret-min { font-weight: 800; color: var(--encre); }
+/* Le terminus : point plein. */
+.arret-terminus .arret-point { background: var(--encre); }

@@ -1,0 +1,13 @@
+.statut {
+  display: inline-flex; align-items: center; gap: 6px; height: 28px;
+  padding: 0 var(--espace-3) 0 var(--espace-2); border-radius: var(--rayon-plein);
+  font-size: 14px; line-height: 20px; font-weight: 700; white-space: nowrap;
+}
+.statut svg { width: 16px; height: 16px; flex: none; }
+.statut-direct { background: var(--vert-doux); color: var(--vert); }
+.statut-proche { background: var(--vert); color: var(--sur-vert); }
+.statut-retard { background: var(--corail-doux); color: var(--corail); }
+.statut-prevu { background: var(--fond-carte); color: var(--encre-douce); box-shadow: inset 0 0 0 1px var(--trait); }
+.statut-pouls { animation: statut-pouls 1.6s ease-in-out infinite; }
+@keyframes statut-pouls { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .statut-pouls { animation: none; } }
