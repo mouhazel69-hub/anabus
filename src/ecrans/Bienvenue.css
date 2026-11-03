@@ -1,0 +1,23 @@
+.bienvenue { min-height: 100dvh; display: flex; flex-direction: column; background: var(--fond); color: var(--encre); }
+.bienvenue-haut {
+  position: relative; flex: none; height: clamp(300px, 51dvh, 430px);
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: var(--espace-8);
+  background: var(--jaune); border-radius: 0 0 40px 40px;
+}
+.bienvenue-logo { position: absolute; left: var(--espace-6); top: 28px; }
+.bienvenue-kaay { width: min(290px, 70vw, calc(51dvh - 90px)); height: auto; }
+.bienvenue-bas {
+  flex-grow: 1; display: flex; flex-direction: column; gap: 14px;
+  width: 100%; max-width: 560px; margin: 0 auto; padding: var(--espace-8) var(--espace-6);
+}
+.bienvenue-texte { font-size: 17px; line-height: 26px; color: var(--encre-douce); }
+.bienvenue-langues { display: flex; gap: var(--espace-2); margin-top: 6px; }
+.bienvenue-action { margin-top: auto; }
+
+/* Pilule de choix (langue) : aplat nuit quand elle est choisie. */
+.pilule {
+  min-height: 48px; padding: 0 var(--espace-4); border: 2px solid var(--trait-fort); border-radius: var(--rayon-plein);
+  background: transparent; color: var(--encre); font-size: 15px; font-weight: 700; cursor: pointer;
+}
+.pilule[aria-pressed="true"] { background: var(--nuit); border-color: var(--nuit); color: var(--sur-nuit); }
+.pilule:focus-visible { box-shadow: var(--anneau-focus); }

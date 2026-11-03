@@ -1,0 +1,9 @@
+.bandeau-demo {
+  padding: 4px var(--espace-4); text-align: center;
+  background: var(--fond-carte); color: var(--encre-douce); border-bottom: 1px solid var(--trait);
+  font-size: 13px; line-height: 18px; font-weight: 500;
+}
+.bandeau-hors {
+  padding: var(--espace-2) var(--espace-4); text-align: center;
+  background: var(--nuit); color: var(--sur-nuit); font-size: 14px; line-height: 20px; font-weight: 700;
+}

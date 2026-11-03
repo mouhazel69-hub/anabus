@@ -1,3 +1,4 @@
+import { t } from '../i18n';
 import './BadgeLigne.css';
 
 interface BadgeLigneProps {
@@ -14,7 +15,7 @@ export function BadgeLigne({ ligne, reseau, taille = 'md', className }: BadgeLig
   return (
     <span className={['badge', taille === 'lg' && 'badge-lg', className].filter(Boolean).join(' ')}>
       <span className="badge-num">
-        <span className="vh">Ligne </span>
+        <span className="vh">{t('ligneVh')}</span>
         {ligne}
       </span>
       {reseau && <span className="badge-reseau">{reseau}</span>}

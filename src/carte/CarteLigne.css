@@ -1,0 +1,43 @@
+.carte-ligne { position: relative; overflow: hidden; background: var(--fond-carte); }
+.carte-ligne-fond { position: absolute; inset: 0; }
+/* Les repères passent au-dessus des étiquettes. */
+.carte-ligne .maplibregl-marker:has(.repere) { z-index: 2; }
+
+.carte-etiquette {
+  display: block; padding: 2px var(--espace-2); border-radius: var(--rayon-sm);
+  background: var(--fond-eleve); color: var(--encre); box-shadow: var(--ombre-feuille);
+  font-size: 13px; line-height: 18px; font-weight: 500; white-space: nowrap; pointer-events: none;
+}
+.carte-etiquette-forte { font-weight: 700; }
+.carte-etiquette-usager { font-weight: 700; font-size: 14px; line-height: 20px; padding: 3px 10px; }
+
+.carte-controles { position: absolute; top: var(--espace-6); right: var(--espace-6); display: flex; flex-direction: column; gap: var(--espace-2); }
+.carte-bouton { border-radius: var(--rayon-md); }
+.carte-message {
+  position: absolute; top: var(--espace-6); left: var(--espace-6); right: 88px; max-width: 360px;
+  padding: var(--espace-2) var(--espace-3); border-radius: var(--rayon-md);
+  background: var(--fond-eleve); box-shadow: var(--ombre-feuille); font-size: 14px; line-height: 20px;
+}
+
+.carte-legende {
+  position: absolute; left: var(--espace-6); bottom: var(--espace-6); margin: 0;
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--espace-2) var(--espace-4);
+  padding: 10px 14px; border-radius: var(--rayon-md); list-style: none;
+  background: var(--fond-eleve); color: var(--encre); box-shadow: var(--ombre-feuille);
+  font-size: 13px; line-height: 18px; font-weight: 500;
+}
+.carte-legende li { display: flex; align-items: center; gap: 6px; }
+.legende-bus, .legende-arret { width: 12px; height: 12px; border-radius: var(--rayon-plein); border: 2px solid var(--encre); }
+.legende-bus { background: var(--jaune); border-color: var(--sur-jaune); }
+.legende-arret { background: var(--fond); }
+.legende-trajet { width: 18px; height: 4px; border-radius: 2px; background: var(--bleu); }
+
+.carte-moi {
+  width: 18px; height: 18px; border-radius: var(--rayon-plein);
+  background: var(--bleu); box-shadow: 0 0 0 3px var(--fond), var(--ombre-feuille);
+}
+
+/* L'attribution OpenStreetMap, discrète mais lisible. */
+.carte-ligne .maplibregl-ctrl-attrib { background: var(--fond-eleve); color: var(--encre-douce); font-family: var(--font-texte); }
+.carte-ligne .maplibregl-ctrl-attrib a { color: var(--encre-douce); }
+.carte-ligne-apercu .maplibregl-ctrl-bottom-right { bottom: auto; top: 0; }

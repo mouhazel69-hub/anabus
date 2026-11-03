@@ -1,0 +1,12 @@
+.accueil-tete { background: var(--fond); padding: 20px var(--espace-4) var(--espace-6); }
+.accueil-tete-contenu { display: flex; flex-direction: column; gap: 20px; }
+.accueil-titres { display: flex; flex-direction: column; gap: var(--espace-2); }
+.accueil-titre { font-family: var(--font-display); font-size: 30px; line-height: 36px; font-weight: 700; letter-spacing: -0.02em; }
+.accueil-tete .recherche { max-width: none; }
+.accueil-pres { padding: var(--espace-6) var(--espace-4); display: flex; flex-direction: column; gap: var(--espace-4); }
+.accueil-message { padding: var(--espace-3) var(--espace-4); border-radius: var(--rayon-md); background: var(--fond-eleve); box-shadow: inset 0 0 0 1px var(--trait); }
+.accueil-toutes { align-self: center; }
+
+.silhouette { height: 128px; border-radius: var(--rayon-md); background: var(--trait); animation: silhouette 1.4s ease-in-out infinite; }
+@keyframes silhouette { 50% { opacity: .55; } }
+@media (prefers-reduced-motion: reduce) { .silhouette { animation: none; } }

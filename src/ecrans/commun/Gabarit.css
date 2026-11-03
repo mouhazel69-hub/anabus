@@ -1,0 +1,19 @@
+.gabarit { min-height: 100dvh; display: flex; flex-direction: column; color: var(--encre); }
+.gabarit-fond { background: var(--fond); }
+.gabarit-carte { background: var(--fond-carte); }
+.gabarit-avec-barre { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+
+/* Le contenu des écrans de l'appli reste en colonne, centré sur grand écran. */
+.colonne { width: 100%; max-width: 600px; margin: 0 auto; }
+
+.entete { background: var(--fond); }
+.entete > * { max-width: 600px; margin-left: auto; margin-right: auto; }
+.entete { padding: var(--espace-4) var(--espace-4) 20px; display: flex; flex-direction: column; gap: var(--espace-4); }
+.entete-ligne { display: flex; align-items: center; gap: var(--espace-3); width: 100%; }
+.entete-texte { width: 100%; color: var(--encre-douce); }
+.entete .titre-1 { font-size: 28px; line-height: 34px; }
+
+.section-titre { display: flex; align-items: baseline; justify-content: space-between; gap: var(--espace-3); flex-wrap: wrap; }
+.pile-cartes { display: flex; flex-direction: column; gap: var(--espace-3); }
+.pile-cartes .carte { max-width: none; }
+.texte-doux { color: var(--encre-douce); }

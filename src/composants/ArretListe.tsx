@@ -1,3 +1,4 @@
+import { t } from '../i18n';
 import './ArretListe.css';
 
 export interface ArretAffiche {
@@ -24,10 +25,10 @@ export function ArretListe({ arrets, className }: ArretListeProps) {
             <span className="arret-point" aria-hidden="true" />
             <span className="arret-nom">
               {a.nom}
-              {a.role === 'usager' && <span className="arret-mention"> votre arrêt</span>}
-              {a.role === 'terminus' && <span className="arret-mention"> terminus</span>}
+              {a.role === 'usager' && <span className="arret-mention"> {t('arrets.votreArret')}</span>}
+              {a.role === 'terminus' && <span className="arret-mention"> {t('arrets.terminus')}</span>}
             </span>
-            <span className="arret-min">{a.minutes} min</span>
+            <span className="arret-min">{t('minutes', { minutes: a.minutes })}</span>
           </li>
         ))}
       </ol>

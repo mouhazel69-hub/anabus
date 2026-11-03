@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { Bouton } from './Bouton';
 import { Icone } from './Icone';
+import { t } from '../i18n';
 import './RechercheLigne.css';
 
 interface RechercheLigneProps {
@@ -19,7 +20,7 @@ interface RechercheLigneProps {
 
 /** Le champ « numéro du bus » et son bouton : le premier geste de l'appli. */
 export function RechercheLigne({
-  valeur, defaut = '', onChange, onSubmit, placeholder = 'Numéro du bus, ex. 23', action = 'Voir le bus', autoFocus, className,
+  valeur, defaut = '', onChange, onSubmit, placeholder = t('recherche.placeholderSite'), action = t('recherche.action'), autoFocus, className,
 }: RechercheLigneProps) {
   const [interne, setInterne] = useState(defaut);
   const controle = valeur !== undefined;
@@ -39,7 +40,7 @@ export function RechercheLigne({
     <form className={['recherche', className].filter(Boolean).join(' ')} role="search" onSubmit={envoyer}>
       <label className="recherche-champ">
         <Icone nom="recherche" />
-        <span className="vh">Numéro du bus</span>
+        <span className="vh">{t('recherche.libelle')}</span>
         <input
           type="text" autoComplete="off" autoCapitalize="characters" spellCheck={false} enterKeyHint="search"
           value={texte} onChange={(e) => changer(e.target.value)} placeholder={placeholder} autoFocus={autoFocus}

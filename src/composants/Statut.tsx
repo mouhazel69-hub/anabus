@@ -1,14 +1,15 @@
 import type { ReactNode } from 'react';
 import { Icone } from './Icone';
+import { t } from '../i18n';
 import './Statut.css';
 
 export type TypeStatut = 'direct' | 'proche' | 'retard' | 'prevu';
 
 const STATUTS = {
-  direct: { mot: 'En direct', icone: null },
-  proche: { mot: 'Arrive', icone: 'bus' },
-  retard: { mot: 'Retard', icone: 'alerte' },
-  prevu: { mot: 'Horaire prévu', icone: 'horloge' },
+  direct: { mot: 'statut.direct', icone: null },
+  proche: { mot: 'statut.proche', icone: 'bus' },
+  retard: { mot: 'statut.retard', icone: 'alerte' },
+  prevu: { mot: 'statut.prevu', icone: 'horloge' },
 } as const;
 
 interface StatutProps {
@@ -31,7 +32,7 @@ export function Statut({ type = 'direct', children, className }: StatutProps) {
           <circle cx="8" cy="8" r="4.5" fill="currentColor" />
         </svg>
       )}
-      {children ?? s.mot}
+      {children ?? t(s.mot)}
     </span>
   );
 }

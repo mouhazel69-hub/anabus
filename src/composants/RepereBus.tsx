@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { t } from '../i18n';
 import './RepereBus.css';
 
 /** L'avant du bus du logo, en une seule encre : pare-brise et phares évidés. */
@@ -20,7 +21,7 @@ interface RepereBusProps {
 
 /** Le bus sur la carte : disque jaune cerclé de nuit, avec une onde quand la position est en direct. */
 export function RepereBus({ ligne, direct = true, style, className }: RepereBusProps) {
-  const libelle = 'Bus' + (ligne ? ` ligne ${ligne}` : '') + (direct ? ', position en direct' : ', position estimée');
+  const libelle = t('repere.bus', { ligne: ligne ?? '' }) + t(direct ? 'repere.direct' : 'repere.estime');
   return (
     <span className={['repere', className].filter(Boolean).join(' ')} role="img" aria-label={libelle} style={style}>
       {direct && <span className="repere-onde" />}

@@ -21,3 +21,4 @@
 }
 @keyframes feuille-voile { from { opacity: 0; } }
 @keyframes feuille-monte { from { transform: translateY(40px); opacity: 0; } }
+.feuille-annuler { align-self: center; }

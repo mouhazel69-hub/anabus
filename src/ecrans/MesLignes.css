@@ -1,0 +1,7 @@
+.mes-lignes { flex-grow: 1; padding: 20px var(--espace-4); display: flex; flex-direction: column; gap: 20px; }
+.mes-lignes-vide, .alertes-vide { padding: var(--espace-4); border-radius: var(--rayon-md); background: var(--fond-eleve); color: var(--encre-douce); box-shadow: inset 0 0 0 1px var(--trait); }
+.mes-lignes-ajouter { margin-top: auto; }
+.alertes-liste { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--espace-6); }
+.alerte { display: flex; flex-direction: column; gap: var(--espace-2); }
+.alerte .carte { max-width: none; }
+.alerte-supprimer { align-self: flex-start; padding-left: 0; }

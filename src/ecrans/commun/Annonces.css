@@ -1,0 +1,17 @@
+.annonces {
+  position: fixed; left: var(--espace-4); right: var(--espace-4); z-index: 60;
+  bottom: calc(80px + env(safe-area-inset-bottom)); display: flex; justify-content: center; pointer-events: none;
+}
+.annonce {
+  display: flex; align-items: center; gap: var(--espace-3); width: 100%; max-width: 480px;
+  padding: var(--espace-3) var(--espace-2) var(--espace-3) var(--espace-4);
+  border-radius: var(--rayon-md); background: var(--nuit); color: var(--sur-nuit); box-shadow: var(--ombre-feuille);
+  font-size: 16px; line-height: 22px; font-weight: 500; pointer-events: auto;
+  animation: annonce-monte .2s ease-out;
+}
+.annonce-texte { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.annonce-titre { font-size: 17px; line-height: 24px; font-weight: 700; }
+.annonce-titre-marque { font-family: var(--font-display); color: var(--jaune); }
+.annonce-fermer { color: var(--sur-nuit); }
+.annonce-fermer:hover { background: color-mix(in srgb, var(--sur-nuit) 15%, transparent); }
+@keyframes annonce-monte { from { transform: translateY(12px); opacity: 0; } }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { BadgeLigne } from './BadgeLigne';
 import { Statut, type TypeStatut } from './Statut';
 import { estMuNgiNew, statutSelonMinutes } from '../logique/seuils';
+import { t } from '../i18n';
 import './CarteArrivee.css';
 
 interface CarteArriveeProps {
@@ -41,11 +42,11 @@ export function CarteArrivee({ ligne, destination, arret, minutes, statut, motSt
       </div>
       <div className="carte-temps">
         {arrive ? (
-          <span className="carte-ngi">Mu ngi ñëw</span>
+          <span className="carte-ngi">{t('muNgiNew')}</span>
         ) : (
           <>
             <span className="carte-min">{minutes}</span>
-            <span className="carte-unite">min</span>
+            <span className="carte-unite">{t('min')}</span>
           </>
         )}
       </div>

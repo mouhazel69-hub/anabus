@@ -1,0 +1,82 @@
+.site { background: var(--fond); color: var(--encre); }
+.site-largeur { max-width: 1200px; margin: 0 auto; padding-left: var(--espace-6); padding-right: var(--espace-6); }
+.site a:not(.bouton) { color: inherit; text-decoration: none; }
+.site a:not(.bouton):hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.site-entete { padding-top: 20px; padding-bottom: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--espace-4) var(--espace-8); }
+.site-logo { display: flex; border-radius: var(--rayon-sm); }
+.site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: var(--espace-3) 28px; }
+.site-nav a:not(.bouton) { display: inline-flex; align-items: center; min-height: 48px; font-weight: 500; border-radius: var(--rayon-sm); }
+
+.site-ouverture { padding-top: var(--espace-12); padding-bottom: 96px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px; }
+.site-ouverture-texte { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: var(--espace-6); }
+.site-grand-titre { font-family: var(--font-display); font-size: clamp(44px, 6vw, 80px); line-height: 1.04; font-weight: 700; letter-spacing: -0.02em; }
+.site-chapo { max-width: 560px; font-size: 20px; line-height: 30px; color: var(--encre-douce); }
+.site-petit { font-size: 14px; line-height: 20px; color: var(--encre-douce); }
+
+.site-apercu { flex: 1 1 460px; min-width: 0; position: relative; height: 520px; border-radius: var(--rayon-lg); overflow: hidden; background: var(--fond-carte); }
+.carte-ligne.site-apercu-carte { position: absolute; inset: 0; }
+.site-apercu-arrivee { position: absolute; left: var(--espace-4); right: var(--espace-4); bottom: var(--espace-4); z-index: 3; }
+
+.site-section { padding-bottom: 96px; display: flex; flex-direction: column; gap: 40px; }
+.site-section-haute { padding-top: 96px; }
+.site-intro { display: flex; flex-direction: column; gap: var(--espace-3); max-width: 680px; }
+.site-titre { font-family: var(--font-display); font-size: clamp(32px, 4vw, 44px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+
+.site-etapes { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--espace-6); }
+.site-etapes li { display: flex; flex-direction: column; gap: var(--espace-4); padding: var(--espace-8); border-radius: var(--rayon-lg); background: var(--fond-carte); }
+.site-numero {
+  display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: var(--rayon-plein);
+  background: var(--nuit); color: var(--jaune); font-family: var(--font-display); font-size: 22px; line-height: 26px; font-weight: 700;
+}
+
+.site-nuit, .site-pied { background: var(--nuit); color: var(--sur-nuit); }
+.site-nuit-contenu { padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; gap: var(--espace-8); }
+.site-nuit-titre { display: flex; flex-wrap: wrap; align-items: center; gap: var(--espace-4) var(--espace-8); }
+.site-ngi { font-family: var(--font-display); font-size: clamp(48px, 7vw, 104px); line-height: 1; font-weight: 700; letter-spacing: -0.02em; color: var(--jaune); }
+.site-nuit-bas { display: flex; flex-wrap: wrap; align-items: center; gap: var(--espace-8) 56px; }
+.site-nuit-texte { flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: var(--espace-3); }
+.site-chapo-nuit { font-size: 20px; line-height: 30px; }
+/* Texte secondaire sur nuit : un blanc légèrement adouci. */
+.site-nuit-doux { color: color-mix(in srgb, var(--sur-nuit) 80%, var(--nuit)); }
+.site-nuit-carte { flex: 1 1 340px; min-width: 0; display: flex; justify-content: flex-end; }
+
+.site-reseaux { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--espace-6); }
+.site-reseaux article { display: flex; flex-direction: column; align-items: flex-start; gap: var(--espace-3); padding: 28px; border: 1px solid var(--trait); border-radius: var(--rayon-lg); }
+.site-reseau-nom { font-family: var(--font-display); font-size: 22px; line-height: 28px; font-weight: 700; }
+
+.site-jaune { background: var(--jaune); color: var(--sur-jaune); }
+.site-jaune-contenu { padding-top: 96px; padding-bottom: 96px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px; }
+.site-jaune-texte { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.site-chapo-jaune { max-width: 520px; font-size: 20px; line-height: 30px; }
+.site-magasins { display: flex; flex-wrap: wrap; gap: var(--espace-3); }
+.site-magasins span { display: inline-flex; align-items: center; height: 52px; padding: 0 20px; border-radius: var(--rayon-md); background: var(--nuit); color: var(--sur-nuit); font-weight: 700; }
+
+.site-telephone {
+  flex: 0 0 300px; width: 300px; height: 600px; margin: 0 auto; overflow: hidden; display: flex; flex-direction: column;
+  border: 10px solid var(--nuit); border-radius: 44px; background: var(--fond-carte); color: var(--encre);
+}
+.site-telephone-tete { background: var(--fond); padding: var(--espace-6) var(--espace-4) 18px; display: flex; flex-direction: column; gap: 14px; }
+.site-telephone-titre { font-family: var(--font-display); font-size: 24px; line-height: 30px; font-weight: 700; letter-spacing: -0.02em; }
+.site-telephone-corps { padding: var(--espace-4) var(--espace-3); }
+.site-telephone-cartes { width: 328px; transform: scale(0.78); transform-origin: top left; display: flex; flex-direction: column; gap: var(--espace-3); }
+
+.site-pied-contenu { padding-top: 56px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 40px; }
+.site-pied-haut { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--espace-8); }
+.site-pied-marque { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.site-signature { font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 700; color: var(--jaune); }
+.site-pied-liens { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.site-pied-liens a { display: inline-flex; align-items: center; min-height: 40px; }
+.site a.site-pied-fort { color: var(--jaune); font-weight: 700; }
+.site-copyright { padding-top: var(--espace-6); border-top: 1px solid color-mix(in srgb, var(--sur-nuit) 20%, var(--nuit)); font-size: 13px; line-height: 18px; color: color-mix(in srgb, var(--sur-nuit) 80%, var(--nuit)); }
+.site-nuit :focus-visible, .site-pied :focus-visible { box-shadow: 0 0 0 2px var(--nuit), 0 0 0 4px var(--jaune); }
+
+@media (max-width: 600px) {
+  .site-largeur { padding-left: var(--espace-4); padding-right: var(--espace-4); }
+  .site-ouverture { padding-top: var(--espace-6); padding-bottom: 56px; gap: var(--espace-8); }
+  .site-apercu { height: 420px; }
+  .site-section { padding-bottom: 56px; }
+  .site-section-haute, .site-nuit-contenu, .site-jaune-contenu { padding-top: 56px; padding-bottom: 56px; }
+  .site-etapes li { padding: var(--espace-6); }
+  .site-chapo, .site-chapo-nuit, .site-chapo-jaune { font-size: 18px; line-height: 28px; }
+}
