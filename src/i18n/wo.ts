@@ -124,6 +124,9 @@ export const wo: Record<Cle, string> = {
   'introuvable.titre': 'Page introuvable', // À traduire
   'introuvable.texte': "Cette adresse n'existe pas. Revenez à l'accueil pour chercher votre bus.", // À traduire
   'introuvable.action': "Aller à l'accueil", // À traduire
+  'erreur.titre': "Ana Bus n'a pas pu s'ouvrir", // À traduire
+  'erreur.texte': 'Rechargez la page. Si le problème continue, vérifiez votre connexion.', // À traduire
+  'erreur.action': 'Recharger la page', // À traduire
   'site.accueil': 'Ana Bus, accueil', // À traduire
   'site.nav.comment': 'Comment ça marche', // À traduire
   'site.nav.reseaux': 'Les réseaux', // À traduire

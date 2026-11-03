@@ -9,6 +9,7 @@ import Introuvable from './ecrans/Introuvable';
 import { FournisseurLangue } from './i18n';
 import { FournisseurAnnonces } from './ecrans/commun/Annonces';
 import { VeilleurAlertes } from './ecrans/commun/VeilleurAlertes';
+import { FiletErreur } from './ecrans/commun/FiletErreur';
 
 // Les écrans qui portent une carte (MapLibre) ou servent rarement sont chargés à la demande,
 // pour que l'appli s'ouvre vite même en 3G.
@@ -25,24 +26,26 @@ function RemonterEnHaut() {
 
 export default function App() {
   return (
-    <FournisseurLangue>
-      <FournisseurAnnonces>
-        <RemonterEnHaut />
-        <VeilleurAlertes />
-        <Suspense fallback={null}>
-          <Routes>
-            <Route path="/" element={<AccueilSite />} />
-            <Route path="/app" element={<Accueil />} />
-            <Route path="/bienvenue" element={<Bienvenue />} />
-            <Route path="/recherche" element={<Recherche />} />
-            <Route path="/ligne/:numero" element={<Suivi />} />
-            <Route path="/mes-lignes" element={<MesLignes />} />
-            <Route path="/alertes" element={<Alertes />} />
-            <Route path="/design" element={<Design />} />
-            <Route path="*" element={<Introuvable />} />
-          </Routes>
-        </Suspense>
-      </FournisseurAnnonces>
-    </FournisseurLangue>
+    <FiletErreur>
+      <FournisseurLangue>
+        <FournisseurAnnonces>
+          <RemonterEnHaut />
+          <VeilleurAlertes />
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path="/" element={<AccueilSite />} />
+              <Route path="/app" element={<Accueil />} />
+              <Route path="/bienvenue" element={<Bienvenue />} />
+              <Route path="/recherche" element={<Recherche />} />
+              <Route path="/ligne/:numero" element={<Suivi />} />
+              <Route path="/mes-lignes" element={<MesLignes />} />
+              <Route path="/alertes" element={<Alertes />} />
+              <Route path="/design" element={<Design />} />
+              <Route path="*" element={<Introuvable />} />
+            </Routes>
+          </Suspense>
+        </FournisseurAnnonces>
+      </FournisseurLangue>
+    </FiletErreur>
   );
 }

@@ -5,7 +5,8 @@
 .recherche-bloc-serre { gap: 0; }
 .recherche-bloc-serre .recherche-sous-titre { margin-bottom: 4px; }
 .recherche-sous-titre { font-size: 13px; line-height: 18px; font-weight: 500; color: var(--encre-douce); }
-.recherche-recentes, .recherche-liste, .aucune-proches { margin: 0; padding: 0; list-style: none; }
+.recherche-recentes, .recherche-liste, .page-erreur { min-height: 100dvh; justify-content: center; }
+.aucune-proches { margin: 0; padding: 0; list-style: none; }
 .recherche-recentes { display: flex; flex-wrap: wrap; gap: var(--espace-2); }
 .recherche-vide { padding: var(--espace-3) 0; }
 

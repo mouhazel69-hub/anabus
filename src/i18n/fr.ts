@@ -148,6 +148,11 @@ export const fr = {
   'introuvable.texte': "Cette adresse n'existe pas. Revenez à l'accueil pour chercher votre bus.",
   'introuvable.action': "Aller à l'accueil",
 
+  // Erreur
+  'erreur.titre': "Ana Bus n'a pas pu s'ouvrir",
+  'erreur.texte': 'Rechargez la page. Si le problème continue, vérifiez votre connexion.',
+  'erreur.action': 'Recharger la page',
+
   // Site
   'site.accueil': 'Ana Bus, accueil',
   'site.nav.comment': 'Comment ça marche',
